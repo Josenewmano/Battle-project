@@ -8,7 +8,7 @@ group :development, :test do
     gem "rspec"
     gem "sinatra"
     gem "webrick"
-    # gem 'sinatra/reloader'
+    #gem 'sinatra/reloader'
     gem 'capybara'
     gem 'webdrivers', '~> 5.0', require: false
 end

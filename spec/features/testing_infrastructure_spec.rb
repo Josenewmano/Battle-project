@@ -14,6 +14,6 @@ feature "Capybara name in form" do
     fill_in(:player_1_name, with: 'Joe')
     fill_in(:player_2_name, with: 'Jordan')
     click_button('Submit')
-    expect(page).to have_content 'Joe vs Jordan'
+    expect(page).to have_content 'Joe vs. Jordan'
   end
 end

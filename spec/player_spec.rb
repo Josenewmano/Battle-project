@@ -13,6 +13,6 @@ describe Player do
   end
 
   it 'is damaged by attack' do
-    expect { fred.attack(george) }.to change { george.hp }.by(-10)
+    expect { fred.receive_damage }.to change { fred.hp }.by(-10)
   end
 end

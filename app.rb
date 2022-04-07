@@ -1,10 +1,11 @@
 require 'sinatra'
 require 'sinatra/contrib'
 require_relative './lib/player'
+require_relative './lib/game'
 
 class Battle < Sinatra::Base
    enable :sessions
-  
+
   get '/' do
     erb :index
   end
@@ -21,8 +22,14 @@ class Battle < Sinatra::Base
 
   get '/attack' do
     @game = $game
-    @game.attack(@game.player_2)
+    @game.attack(@game.players[@game.index_defence])
     erb :attack
+  end
+
+  get '/switch' do
+    @game = $game
+    @game.switch_players
+    redirect '/play'
   end
 
   run! if app_file == $0

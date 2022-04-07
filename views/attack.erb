@@ -1,3 +1,4 @@
-<%= @game.player_1.name %> attacked <%= @game.player_2.name %>
-
-<%= @game.player_2.name %>: <%= @game.player_2.hp %>HP
+<p><%= @game.players[@game.index].name %> attacked <%= @game.players[@game.index_defence].name %> </p>
+<p><%= @game.players[@game.index_defence].name %>: <%= @game.players[@game.index_defence].hp %>HP </p>
+<p> <%= @game.players[@game.index_defence].name%>s turn</p>
+<a href='/switch'>Switch</a>
